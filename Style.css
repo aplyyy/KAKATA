@@ -1,0 +1,124 @@
+body {
+  font-family: 'Fredoka', sans-serif;
+  background-color: #f0f2f5;
+  text-align: center;
+  padding: 50px 20px;
+  margin: 0;
+  color: #333;
+}
+
+.logo {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-size: 3rem;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+#currentLevel {
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.grid {
+  display: grid;
+  gap: 8px;
+  justify-content: center;
+  margin: 30px 0;
+}
+
+.cell {
+  width: 50px;
+  height: 50px;
+  border: 2px solid #d3d6da;
+  font-size: 28px;
+  font-weight: bold;
+  line-height: 50px;
+  text-transform: uppercase;
+  background-color: white;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+  transition: background-color 0.3s, border-color 0.3s;
+  user-select: none;
+}
+
+.correct {
+  background-color: #6aaa64;
+  color: white;
+  border-color: #6aaa64;
+}
+
+.present {
+  background-color: #c9b458;
+  color: white;
+  border-color: #c9b458;
+}
+
+.absent {
+  background-color: #787c7e;
+  color: white;
+  border-color: #787c7e;
+}
+
+select, input, button {
+  padding: 10px 15px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  margin: 5px;
+  transition: all 0.2s;
+}
+
+select:focus, input:focus {
+  border-color: #6aaa64;
+  box-shadow: 0 0 5px rgba(106,170,100,0.5);
+}
+
+button {
+  background-color: #6aaa64;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #5a9a57;
+}
+
+#message {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #444;
+}
+
+/* modal styles */
+.modal {
+  display: flex;
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.5);
+  backdrop-filter: blur(3px);
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 30px 40px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.modal-content h2 {
+  margin-bottom: 20px;
+}

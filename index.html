@@ -1,0 +1,46 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kata-Kata (Tebak Kata)</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+  <div class="logo">🎯 Tebak Kata!</div>
+    <div id="currentLevel"></div>
+
+  <div id="startModal" class="modal">
+    <div class="modal-content">
+      <h2>Mulai Permainan</h2>
+      <label for="modalLevelSelect">Pilih Level:</label>
+      <select id="modalLevelSelect">
+        <option value="easy">Easy</option>
+        <option value="medium">Medium</option>
+        <option value="hard">Hard</option>
+      </select>
+      <br /><br />
+      <button onclick="startGameFromModal()">Mulai</button>
+    </div>
+  </div>
+
+  <div>
+    <button id="changeLevelBtn" onclick="openModal()" style="display:none; margin-bottom:15px;">🔁 Ganti Level</button>
+    <button id="nextBtn" style="display:none;" onclick="startGame(currentLevel)">Selanjutnya</button>
+  </div>
+
+  <div class="grid" id="grid" style="display: none;"></div>
+  <div id="inputArea" style="display: none;">
+    <input type="text" id="guessInput" autofocus />
+    <button onclick="submitGuess()">Tebak</button>
+  </div>
+
+  <div id="message"></div>
+  <audio id="clapSound" src="Clap.mp3" preload="auto"></audio>
+  <audio id="loseSound" src="Lose.mp3" preload="auto"></audio>
+  <script src="script.js"></script>
+</body>
+</html>
