@@ -2,7 +2,7 @@ const clapSound = document.getElementById("clapSound");
 const loseSound = document.getElementById("loseSound");
 const nextBtn = document.getElementById("nextBtn");
 
-
+//ee
 const wordLists = {
   easy: ["BUKU", "PAKU", "SISI", "ROTI"],
   medium: ["POLISI", "POSISI", "DIVISI"],
